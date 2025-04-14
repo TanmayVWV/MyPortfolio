@@ -1,4 +1,4 @@
-const nano = require('nano')('http://admin:admin@couchdb:5984');
+const nano = require('nano')(process.env.COUCHDB_URL); // uses the environment variable
 
 let channels, posts, users;
 
